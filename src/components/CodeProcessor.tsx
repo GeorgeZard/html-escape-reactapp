@@ -121,14 +121,15 @@ export default function CodeProcessor() {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 space-y-4">
-      <h1 className="text-2xl font-bold text-center">Code Processor</h1>
+      <h1 className="text-2xl font-bold text-center  text-gray-900 dark:text-white">Code Processor</h1>
 
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Format Code</h2>
+        <h2 className="text-xl font-semibold  text-gray-900 dark:text-white">Format Code</h2>
         <textarea
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          className="w-full h-48 p-4 border rounded focus:ring-2 focus:ring-blue-500 font-mono"
+          className="w-full h-48 p-4 border rounded bg-gray-50 dark:bg-gray-800 
+                     text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
           placeholder="Paste your code here"
         />
         <div className="flex justify-between items-center">
@@ -138,7 +139,7 @@ export default function CodeProcessor() {
           >
             Format Code
           </button>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2  text-gray-900 dark:text-white">
             <label>Auto Clear:</label>
             <input
               type="checkbox"
@@ -154,11 +155,12 @@ export default function CodeProcessor() {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Process Changes</h2>
+        <h2 className="text-xl font-semibold  text-gray-900 dark:text-white">Process Changes</h2>
         <textarea
           value={changes}
           onChange={(e) => setChanges(e.target.value)}
-          className="w-full h-48 p-4 border rounded focus:ring-2 focus:ring-blue-500 font-mono"
+          className="w-full h-48 p-4 border rounded bg-gray-50 dark:bg-gray-800 
+                     text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600"
           placeholder="Paste your JSON changes here"
         />
         <div className="flex justify-between items-center">
@@ -168,7 +170,7 @@ export default function CodeProcessor() {
           >
             Process Changes
           </button>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2  text-gray-900 dark:text-white">
             <label>Auto Clear:</label>
             <input
               type="checkbox"
