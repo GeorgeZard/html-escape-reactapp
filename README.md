@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# React Code Processor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that allows users to format and process code snippets.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Code Formatting**: Users can paste code into the app, and it will format the code with line numbers.
+- **Code Processing**: Users can define JSON-formatted changes to apply to the code, and the app will process those changes.
+- **Dark Mode**: The app has a dark mode theme that can be toggled.
+- **Clipboard Integration**: Users can copy the formatted or processed code to their clipboard.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository: `git clone https://github.com/your-username/react-code-processor.git`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open the app in your browser at `http://localhost:3000`
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Formatting Code**: Paste your code into the "Format Code" section, then click the "Format Code" button. The formatted code will be displayed and copied to your clipboard.
+2. **Processing Changes**: Paste your JSON-formatted changes into the "Process Changes" section, then click the "Process Changes" button. The app will apply the changes to the code and display the result.
+3. **Toggling Dark Mode**: Click the sun/moon icon in the top right corner to toggle between light and dark mode.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Contributing
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Contributions are welcome! If you find a bug or have a feature request, please open an issue. If you would like to contribute code, please fork the repository and submit a pull request.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## License
+
+This project is licensed under the [MIT License](LICENSE).
